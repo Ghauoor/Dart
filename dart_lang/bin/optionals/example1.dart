@@ -10,10 +10,11 @@ void main(List<String> args) {
   lastName ??= 'G';
   //!
   print(lastName);
-}
 
-void doSomething(String? one, String? two) {
-  one ??= two;
+  String? name;
+  print(name ?? 'Ghayoor');
+
+  final foo = name;
 }
 
 
@@ -25,5 +26,6 @@ void doSomething(String? one, String? two) {
 
 /***
  * Optionality is the ability to a value or not have a value
+ * ?.Null aware oprartor
  * 
  *  */ 
