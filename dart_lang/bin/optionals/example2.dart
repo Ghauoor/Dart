@@ -1,6 +1,10 @@
 void main(List<String> args) {
-  String? name;
-  String? fullName;
-  final foo = name ?? fullName ?? 'Ghayoor Hussain';
-  print(foo.runtimeType);
+  String? lastName;
+  print(lastName?.length);
+
+  String? nullName;
+
+  print(lastName ?? 'Ghayoor');
+  print(lastName ?? nullName);
+  print(lastName ?? nullName ?? 'Hussain');
 }
