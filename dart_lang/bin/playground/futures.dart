@@ -14,6 +14,11 @@ void main(List<String> args) {
   delay
       .then((value) => print('I have been waiting'))
       .catchError((error) => print(error));
+
+  print('About to fetch the data');
+  get('http://example.com').then(
+    (value) => print(value),
+  );
 }
 
 //async --> tells dart to return future
@@ -21,4 +26,10 @@ Future<String> runInFuture() async {
   //await pause the execution of funcation
   var data = await Future.value('World');
   return 'Hello $data';
+}
+
+Future get(String url) {
+  return Future.delayed(Duration(seconds: 3), () {
+    return print('Go and Get the Data');
+  });
 }
