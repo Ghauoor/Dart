@@ -1,11 +1,13 @@
 void aTopLevelFunction() {} // A top-level functionvoid
 
 void main(List<String> args) {
+  sayHi(String name) => 'Hi $name';
+  welcome(sayHi, 'Ghayoor');
   Function anyFunctionInsideTopLevelFunction;
   anyFunctionInsideTopLevelFunction = A.aStaticMethod;
 
   if (A.aStaticMethod == anyFunctionInsideTopLevelFunction) {
-    print('Any function inside a top level function '
+    print('Any welcome inside a top level function '
         ' is as same as a static method.');
   }
 
@@ -47,4 +49,10 @@ catOnYou() {
 class A {
   static void aStaticMethod() {} // A static method
   void anInstanceMethod() {} // An instance method
+}
+
+//Funcs as first class objects
+void welcome(String Function(String) greet, String name) {
+  print(greet(name));
+  print('Welcome $name');
 }
