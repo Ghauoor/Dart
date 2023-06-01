@@ -1,11 +1,11 @@
 import 'cookie.dart';
 
 void main(List<String> args) {
-  Cookie cookie = Cookie();
+  final cookie = Cookie(shap: 'React', size: 12);
   // cookie.baking();
   // final cookieCooling = cookie.isCooling();
   // print(cookieCooling);
 
-  cookie.shap = 'Rectangele';
-  print(cookie.shap);
+  // cookie.shap = 'Rectangele';
+  // cookie.size = 12.3;
 }
