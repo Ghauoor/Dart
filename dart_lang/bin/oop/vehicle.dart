@@ -26,6 +26,6 @@ class Car implements Vehicle {
 
   @override
   void accelerate() {
-    print('Accelerate with the speed of ${speed += 100}');
+    print('Accelerate with the speed of ${speed += 10}');
   }
 }
